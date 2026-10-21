@@ -1,0 +1,322 @@
+/* ---------- Page shell (Flexbox) ---------- */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  min-width: 0; /* stops wide tables from pushing the page sideways */
+}
+
+.content {
+  padding: 24px;
+}
+.voice-panel {
+  flex-direction: column;
+}
+
+.voice-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+/* ---------- Sidebar ---------- */
+.sidebar {
+  width: 260px;
+  background: #0f2554;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.sidebar li {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background: #1b3470;
+}
+
+/* ---------- Topbar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: white;
+}
+
+
+.topbar input {
+  flex: 1;
+  max-width: 480px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #eef1f7;
+}
+
+.avatar {
+  margin-left: auto;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1e4bb8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* hidden on laptop, shown on phone */
+.menu-btn {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Summary cards (for Step 3) ---------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards on laptop */
+  gap: 18px;
+  margin: 24px 0;
+}
+
+/* ---------- Table wrapper (for Step 4) ---------- */
+.table-wrapper {
+  overflow-x: auto; /* table scrolls sideways inside its box on phones */
+}
+/* ---------- Stat card ---------- */
+.stat-card {
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.stat-card.blue { background: #e8f0ff; }
+.stat-card.yellow { background: #fff4d9; }
+.stat-card.green { background: #e2f6e9; }
+.stat-card.red { background: #ffe5e5; }
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.stat-title {
+  font-weight: bold;
+}
+
+.stat-value-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-badge {
+  background: white;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.stat-text {
+  color: #6b7280;
+}
+/* ---------- Jobs table ---------- */
+.jobs-card {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin-top: 24px;
+}
+
+.jobs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.jobs-header a {
+  color: #1e63e9;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  min-width: 800px; /* below this width, the wrapper scrolls instead of squishing */
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  background: #f3f5f9;
+  padding: 12px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #eef0f4;
+  font-size: 15px;
+}
+
+td small {
+  color: #6b7280;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.status.in-progress { background: #fff0c2; color: #a16207; }
+.status.ready { background: #d6f5df; color: #15803d; }
+.status.pending { background: #ffdada; color: #dc2626; }
+
+td small.green-text { color: #15803d; }
+td small.red-text { color: #dc2626; }
+
+.dots-btn {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+/* ---------- Voice panel ---------- */
+.voice-panel {
+  display: flex;
+  gap: 16px;
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.mic-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #1e63e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.voice-content {
+  flex: 1;
+}
+
+.voice-subtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.voice-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.voice-example {
+  flex: 1;
+  background: #f0f2f6;
+  padding: 18px;
+  border-radius: 10px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.record-btn {
+  background: #1e63e9;
+  color: white;
+  border: none;
+  padding: 18px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.record-btn.stop {
+  background: #dc2626;
+}
+/* ================== RESPONSIVE ================== */
+
+/* Tablet: 2 cards per row */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  /* sidebar slides in from the left instead of taking space */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -270px; /* hidden off-screen */
+    height: 100vh;
+    z-index: 10;
+    transition: left 0.3s;
+  }
+
+  .sidebar.open {
+    left: 0; /* visible */
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .topbar {
+    padding: 12px 16px;
+  }
+}
+
+/* Small phone: 1 card per row */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
